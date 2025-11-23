@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missing Child App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="bg-gradient-to-r from-blue-700 to-blue-900 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+          <div class="flex items-center justify-center">
+            <span class="material-icons text-white mr-3 h-8 w-8"
+              >child_care</span
+            >
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+              Missing Child
+              <span class="text-blue-200">Identification System</span>
+            </h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation Menu -->
+      <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+          <div class="relative">
+            <!-- Desktop & Mobile menu -->
+            <ul
+              id="nav-menu"
+              class="hidden md:flex flex-col md:flex-row md:items-center py-3 text-sm md:text-base font-medium w-full md:justify-center"
+            >
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'index' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">home</span> Home
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'Login' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">security</span>
+                  Police Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'WelfareLogin' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">favorite</span>
+                  Welfare Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'ParentRegister' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">person_add</span>
+                  Parents Register
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'ParentLogin' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">person</span>
+                  Parents Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'AdoptionRules' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">description</span>
+                  Adoption Rules
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content Section -->
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden p-6 max-w-4xl mx-auto"
+        >
+          <h2 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >policy</span
+            >
+            Adoption Rules
+          </h2>
+
+          <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+            <p
+              class="text-lg text-red-600 font-medium mb-4"
+              style="font-family: 'Comic Sans MS', cursive"
+            >
+              Child adoption rules vary by country and jurisdiction, but
+              generally, they cover eligibility criteria, legal procedures, and
+              post-adoption requirements
+            </p>
+            <div class="mt-4">
+              <a
+                href="{% url 'a' %}"
+                class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+              >
+                <span class="material-icons mr-2">info</span>
+                Please click here for details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Footer -->
+      <footer class="mt-auto bg-blue-900 text-white">
+        <div class="container mx-auto px-4 py-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-xl font-bold flex items-center">
+                <span class="material-icons text-blue-300 mr-2 h-6 w-6"
+                  >child_care</span
+                >
+                Missing Child Identification System
+              </h3>
+              <p class="mt-2 text-blue-200 max-w-md">
+                Dedicated to reuniting missing children with their families
+                through advanced technology and community involvement.
+              </p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+              <div class="flex space-x-4 mb-4">
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">facebook</span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">twitter</span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">instagram</span>
+                </a>
+              </div>
+              <p class="text-blue-200 text-sm">
+                Emergency Hotline:
+                <span class="font-semibold">1800-123-4567</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-8 pt-6 border-t border-blue-800 text-center text-sm text-blue-300"
+          >
+            © 2025 Missing Child Identification System. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener("click", function () {
+            const menu = document.getElementById("nav-menu");
+            menu.classList.toggle("hidden");
+          });
+        }
+
+        // Close mobile menu on window resize if it's open
+        window.addEventListener("resize", function () {
+          const menu = document.getElementById("nav-menu");
+          if (window.innerWidth >= 768 && menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

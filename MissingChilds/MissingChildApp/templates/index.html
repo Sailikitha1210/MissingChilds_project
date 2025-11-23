@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missing Child App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="bg-gradient-to-r from-blue-700 to-blue-900 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+          <div class="flex items-center justify-center">
+            <span class="material-icons text-white mr-3 h-8 w-8"
+              >child_care</span
+            >
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+              Missing Child
+              <span class="text-blue-200">Identification System</span>
+            </h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation Menu -->
+      <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+          <div class="relative">
+            <!-- Desktop & Mobile menu -->
+            <ul
+              id="nav-menu"
+              class="hidden md:flex flex-col md:flex-row md:items-center py-3 text-sm md:text-base font-medium w-full md:justify-center"
+            >
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'index' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">home</span> Home
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'Login' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">security</span>
+                  Police Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'WelfareLogin' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">favorite</span>
+                  Welfare Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'ParentRegister' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">person_add</span>
+                  Parents Register
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'ParentLogin' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">person</span>
+                  Parents Login
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'Upload' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">upload</span>
+                  Public Upload
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'AdoptionRules' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">description</span>
+                  Adoption Rules
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <div
+        class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 md:py-20"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Help Reunite Missing Children With Their Families
+              </h2>
+              <p class="text-blue-100 text-lg mb-6">
+                Using advanced face recognition technology to identify and
+                locate missing children across India.
+              </p>
+            </div>
+            <div class="md:w-2/5 flex justify-center md:justify-end">
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <div
+                  class="flex justify-center items-center h-48 w-48 md:h-64 md:w-64 bg-white rounded-lg"
+                >
+                  <img
+                    src="https://img.freepik.com/premium-vector/human-hand-helps-unhappy-sad-kid-depression-sitting-mental-health-concept_625536-4845.jpg"
+                    alt=""
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Section -->
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-blue-600 transform hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div class="flex items-center justify-center mb-4">
+              <span class="material-icons h-10 w-10 text-blue-600">search</span>
+            </div>
+            <h3 class="text-2xl font-bold text-center text-blue-800 mb-2">
+              70,000+
+            </h3>
+            <p class="text-blue-600 text-center">
+              Children reported missing annually in India
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-blue-600 transform hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div class="flex items-center justify-center mb-4">
+              <span class="material-icons h-10 w-10 text-blue-600"
+                >check_circle</span
+              >
+            </div>
+            <h3 class="text-2xl font-bold text-center text-blue-800 mb-2">
+              95%
+            </h3>
+            <p class="text-blue-600 text-center">
+              Recognition accuracy with our AI system
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-blue-600 transform hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div class="flex items-center justify-center mb-4">
+              <span class="material-icons h-10 w-10 text-blue-600">group</span>
+            </div>
+            <h3 class="text-2xl font-bold text-center text-blue-800 mb-2">
+              5,000+
+            </h3>
+            <p class="text-blue-600 text-center">
+              Families reunited through this platform
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden p-6 max-w-4xl mx-auto"
+        >
+          <h2 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600">info</span>
+            About Our System
+          </h2>
+
+          <div class="space-y-6">
+            <div
+              class="p-4 bg-blue-50 rounded-md border-l-4 border-blue-600 hover:bg-blue-100 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-semibold text-blue-800 mb-2">
+                Deep Learning Recognition
+              </h3>
+              <p class="text-blue-700">
+                Our system uses advanced deep learning methodology for
+                identifying reported missing children from available photos,
+                using face recognition with over 95% accuracy.
+              </p>
+            </div>
+
+            <div
+              class="p-4 bg-blue-50 rounded-md border-l-4 border-blue-600 hover:bg-blue-100 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-semibold text-blue-800 mb-2">
+                Public Participation
+              </h3>
+              <p class="text-blue-700">
+                The public can upload photographs of children they believe may
+                be missing, along with location details. These photos are
+                automatically compared with our database using AI algorithms.
+              </p>
+            </div>
+
+            <div
+              class="p-4 bg-blue-50 rounded-md border-l-4 border-blue-600 hover:bg-blue-100 transition-colors duration-300"
+            >
+              <h3 class="text-lg font-semibold text-blue-800 mb-2">
+                Advanced Technology
+              </h3>
+              <p class="text-blue-700">
+                Face descriptors are extracted using pre-trained CNN models with
+                VGG-Face deep architecture, while child recognition is performed
+                using a trained SVM classifier for maximum accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How It Works Section -->
+      <div class="container mx-auto px-4 py-12">
+        <h2
+          class="text-2xl md:text-3xl font-bold text-blue-800 mb-8 text-center"
+        >
+          How It Works
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full">
+                <span class="material-icons h-8 w-8 text-blue-600"
+                  >add_photo_alternate</span
+                >
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2 text-center">
+              1. Report
+            </h3>
+            <p class="text-blue-600 text-center">
+              Parents report missing children with photos and details through
+              our secure platform
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full">
+                <span class="material-icons h-8 w-8 text-blue-600">search</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2 text-center">
+              2. Search
+            </h3>
+            <p class="text-blue-600 text-center">
+              Our AI continuously analyzes public uploads to identify potential
+              matches
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full">
+                <span class="material-icons h-8 w-8 text-blue-600"
+                  >check_circle</span
+                >
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2 text-center">
+              3. Reunite
+            </h3>
+            <p class="text-blue-600 text-center">
+              When matches are found, authorities are notified to verify and
+              reunite families
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="bg-blue-700 py-12 mb-8">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+            Join Our Mission
+          </h2>
+          <p class="text-blue-100 max-w-2xl mx-auto mb-8">
+            Every photo uploaded could be the key to bringing a child home.
+            Together, we can make a difference.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#"
+              class="bg-white text-blue-700 hover:bg-blue-50 transition duration-300 font-medium py-3 px-6 rounded-lg flex items-center"
+            >
+              <span class="material-icons h-5 w-5 mr-2">upload</span> Upload a
+              Photo
+            </a>
+            <a
+              href="#"
+              class="bg-blue-900 text-white hover:bg-blue-950 transition duration-300 font-medium py-3 px-6 rounded-lg flex items-center"
+            >
+              <span class="material-icons h-5 w-5 mr-2">phone</span> Emergency
+              Hotline
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-auto bg-blue-900 text-white">
+        <div class="container mx-auto px-4 py-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-xl font-bold flex items-center">
+                <span class="material-icons text-blue-300 mr-2 h-6 w-6"
+                  >child_care</span
+                >
+                Missing Child Identification System
+              </h3>
+              <p class="mt-2 text-blue-200 max-w-md">
+                Dedicated to reuniting missing children with their families
+                through advanced technology and community involvement.
+              </p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+              <div class="flex space-x-4 mb-4">
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">facebook</span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">twitter</span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:text-blue-300 transition-colors duration-200 bg-blue-800 p-2 rounded-full"
+                >
+                  <span class="material-icons h-5 w-5">instagram</span>
+                </a>
+              </div>
+              <p class="text-blue-200 text-sm">
+                Emergency Hotline:
+                <span class="font-semibold">1800-123-4567</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-8 pt-6 border-t border-blue-800 text-center text-sm text-blue-300"
+          >
+            © 2025 Missing Child Identification System. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("nav-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Close mobile menu on window resize if it's open
+      window.addEventListener("resize", function () {
+        const menu = document.getElementById("nav-menu");
+        if (window.innerWidth >= 768 && menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

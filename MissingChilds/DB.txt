@@ -1,0 +1,25 @@
+create database MissingChildDB;
+use MissingChildDB;
+create table missing(person_name varchar(60),
+child_name varchar(60),
+contact_no varchar(20),
+location varchar(120),
+image varchar(60),
+upload_date varchar(30),
+status varchar(100));
+
+create table parentsignup(username varchar(50) primary key,
+password varchar(50),
+name varchar(50),
+age  varchar(30),
+occupation varchar(50),
+contactno  varchar(20),
+email  varchar(50),
+address varchar(50),
+filename  varchar(50),
+child_age varchar(20),
+child_color varchar(20));
+
+create table adoption(username varchar(50),
+childname varchar(50),
+adoption_date varchar(30));

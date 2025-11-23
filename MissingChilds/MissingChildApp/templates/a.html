@@ -1,0 +1,319 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Adoption Rules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="bg-gradient-to-r from-blue-700 to-blue-900 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+          <div class="flex items-center justify-center">
+            <span class="material-icons text-white mr-3 h-8 w-8"
+              >description</span
+            >
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+              Child Adoption
+              <span class="text-blue-200">Rules</span>
+            </h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation Menu -->
+      <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+          <div class="relative">
+            <ul
+              class="flex flex-wrap justify-center py-3 text-sm md:text-base font-medium"
+            >
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="{% url 'index' %}"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">home</span> Home
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="#eligibility"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">people</span>
+                  Eligibility
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="#child-criteria"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">child_care</span>
+                  Child Criteria
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="#process"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">assignment</span>
+                  Adoption Process
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="#post-adoption"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">check_circle</span>
+                  Post-Adoption
+                </a>
+              </li>
+              <li class="my-1 md:my-0 md:mx-2">
+                <a
+                  href="#international"
+                  class="flex items-center px-3 py-2 rounded-md text-blue-700 hover:text-white hover:bg-blue-600 transition duration-300"
+                >
+                  <span class="material-icons h-5 w-5 mr-1">public</span>
+                  International
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content Section -->
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden p-6 max-w-4xl mx-auto mb-8"
+        >
+          <!-- Back Button -->
+          <a
+            href="index.html"
+            class="inline-flex items-center text-blue-700 hover:text-blue-900 font-medium mb-6 transition duration-300"
+          >
+            <span class="material-icons mr-1">arrow_back</span>
+            Back to Home
+          </a>
+
+          <h2
+            id="eligibility"
+            class="text-2xl font-bold text-blue-800 mb-6 flex items-center"
+          >
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >people</span
+            >
+            1. Eligibility Criteria for Adoptive Parents
+          </h2>
+
+          <p class="text-blue-700 mb-4">
+            Before adopting a child, prospective parents must meet certain legal
+            and ethical requirements:
+          </p>
+
+          <ul class="space-y-2 mb-6 text-blue-700 list-disc pl-6">
+            <li>
+              <strong>Age Requirement:</strong> Typically, the adoptive parent
+              must be between 25-55 years old, depending on the country.
+            </li>
+            <li>
+              <strong>Marital Status:</strong> Married couples are preferred,
+              but single parents can also adopt in many countries.
+            </li>
+            <li>
+              <strong>Financial Stability:</strong> Parents must demonstrate a
+              stable income to support the child.
+            </li>
+            <li>
+              <strong>Health and Fitness:</strong> Medical certificates may be
+              required to prove mental and physical fitness.
+            </li>
+            <li>
+              <strong>Background Check:</strong> A criminal record check ensures
+              child safety.
+            </li>
+          </ul>
+
+          <h2
+            id="child-criteria"
+            class="text-2xl font-bold text-blue-800 mb-6 flex items-center"
+          >
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >child_care</span
+            >
+            2. Eligibility of the Child for Adoption
+          </h2>
+
+          <p class="text-blue-700 mb-4">
+            Not all children can be adopted. They must meet specific conditions:
+          </p>
+
+          <ul class="space-y-2 mb-6 text-blue-700 list-disc pl-6">
+            <li>
+              <strong>Orphaned or Abandoned:</strong> The child must be legally
+              free for adoption.
+            </li>
+            <li>
+              <strong>Parental Consent:</strong> If parents are alive, their
+              consent is required unless they have relinquished their rights.
+            </li>
+            <li>
+              <strong>Child's Age:</strong> Many countries set an age range for
+              adoption, typically from infancy to 18 years.
+            </li>
+            <li>
+              <strong>Medical Records:</strong> The child's health status is
+              reviewed before adoption.
+            </li>
+          </ul>
+
+          <h2
+            id="process"
+            class="text-2xl font-bold text-blue-800 mb-6 flex items-center"
+          >
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >assignment</span
+            >
+            3. Legal Adoption Process
+          </h2>
+
+          <p class="text-blue-700 mb-4">
+            Adopting a child is a multi-step legal procedure:
+          </p>
+
+          <ul class="space-y-2 mb-6 text-blue-700 list-disc pl-6">
+            <li>
+              <strong>Application:</strong> Parents must apply through an
+              authorized agency.
+            </li>
+            <li>
+              <strong>Home Study:</strong> Social workers assess the home
+              environment.
+            </li>
+            <li>
+              <strong>Matching Process:</strong> Parents are matched with a
+              child based on compatibility.
+            </li>
+            <li>
+              <strong>Legal Approval:</strong> A court finalizes the adoption,
+              issuing legal documents.
+            </li>
+            <li>
+              <strong>New Birth Certificate:</strong> The child receives a new
+              birth certificate with the adoptive parents' names.
+            </li>
+          </ul>
+
+          <h2
+            id="post-adoption"
+            class="text-2xl font-bold text-blue-800 mb-6 flex items-center"
+          >
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >check_circle</span
+            >
+            4. Post-Adoption Requirements
+          </h2>
+
+          <p class="text-blue-700 mb-4">
+            Even after adoption, there are important follow-up steps:
+          </p>
+
+          <ul class="space-y-2 mb-6 text-blue-700 list-disc pl-6">
+            <li>
+              <strong>Follow-Up Visits:</strong> Social workers may visit to
+              ensure the child's well-being.
+            </li>
+            <li>
+              <strong>Legal Recognition:</strong> The adoption must be legally
+              recorded.
+            </li>
+            <li>
+              <strong>Emotional Adjustment:</strong> Parents must provide
+              emotional and psychological support.
+            </li>
+          </ul>
+
+          <h2
+            id="international"
+            class="text-2xl font-bold text-blue-800 mb-6 flex items-center"
+          >
+            <span class="material-icons h-6 w-6 mr-2 text-blue-600"
+              >public</span
+            >
+            5. International Adoption Considerations
+          </h2>
+
+          <p class="text-blue-700 mb-4">
+            International adoptions have additional legal requirements:
+          </p>
+
+          <ul class="space-y-2 mb-6 text-blue-700 list-disc pl-6">
+            <li>
+              <strong>Hague Convention Compliance:</strong> Countries part of
+              the Hague Adoption Convention must follow its guidelines.
+            </li>
+            <li>
+              <strong>Visa & Immigration:</strong> Adopted children may need a
+              visa or citizenship process.
+            </li>
+            <li>
+              <strong>Legal Recognition in Both Countries:</strong> The adoption
+              must be recognized in the child's home country and the adoptive
+              parents' country.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-auto bg-blue-900 text-white">
+        <div class="container mx-auto px-4 py-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-xl font-bold flex items-center">
+                <span class="material-icons text-blue-300 mr-2 h-6 w-6"
+                  >description</span
+                >
+                Child Adoption Rules
+              </h3>
+              <p class="mt-2 text-blue-200 max-w-md">
+                Guidelines for ensuring ethical and legal adoption procedures.
+              </p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+              <p class="text-blue-200 text-sm">
+                Contact: <span class="font-semibold">adoption@example.org</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-8 pt-6 border-t border-blue-800 text-center text-sm text-blue-300"
+          >
+            © 2025 Child Adoption Guide. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
